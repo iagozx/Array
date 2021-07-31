@@ -1,0 +1,58 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Array
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            List<dynamic> itens = new List<dynamic>();
+            itens.Add(new
+            {
+                Nome = "Danilo",
+                Telefone = "(11) 88888-2222",
+                Endereco = "Rua teste 1234",
+                Valores = new List<int>() { 1, 2, 3 }
+            });
+            itens.Add(new
+            {
+                Nome = "Danilo2",
+                Telefone = "(11) 88888-2222",
+                Endereco = "Rua teste 1234",
+                Valores = new List<int>() { 1, 2, 3 }
+            });
+            itens.Add(new
+            {
+                Nome = "Danilo3",
+                Telefone = "(11) 88888-2222",
+                Endereco = "Rua teste 1234",
+                Valores = new List<int>() { 1, 2, 3 }
+            });
+
+            // for(int i=0; i<itens.Count; i++)
+            // {
+            //     Console.WriteLine(itens[i].Nome);
+            //     Console.WriteLine(itens[i].Telefone);
+            //     Console.WriteLine(itens[i].Endereco);
+            // }
+
+            foreach (var cliente in itens)
+            {
+                Console.WriteLine(cliente.Nome);
+                Console.WriteLine(cliente.Telefone);
+                Console.WriteLine(cliente.Endereco);
+
+                foreach (var valor in cliente.Valores)
+                {
+                    Console.WriteLine(valor);
+                }
+            }
+            var x = "";
+
+        }
+    }
+}
